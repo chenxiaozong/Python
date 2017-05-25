@@ -1,3 +1,6 @@
+#-*- coding: UTF-8 -*- 
+# Pyton 版本: python36
+
 
 ##https://raw.githubusercontent.com/racaljk/hosts/master/hosts
 #0 准备工作:从github 获取更新的host文件 保存到githost
@@ -6,14 +9,14 @@ res = requests.get("https://raw.githubusercontent.com/racaljk/hosts/master/hosts
 savefile = open("githost","wb")
 savefile.write(res.content)
 savefile.close() 
-print ("[status]:"+"get host from github finished !! "  +"(https://raw.githubusercontent.com/racaljk/hosts/master/hosts)")
+print ("[status]:"+"get host from github finished !! "  +"c(https://raw.githubusercontent.com/racaljk/hosts/master/hosts)")
 
 #1 从本地host文件中截取前半部分内容
 import os
 # desk = "C:\\Users\\chen\\Desktop"
 # temppath = os.path.join(desk,"temp")
 temp = open("temp",'w')
-file = open("host")
+file = open("hosts")
 ant = "# Modified hosts start"
 
 while 1:
@@ -68,7 +71,7 @@ print("[status]:"+update)
 pwd = os.getcwd()
 githost_path = os.path.join(pwd,"githost")
 os.remove(githost_path)
-host_path = os.path.join(pwd,"host")
+host_path = os.path.join(pwd,"hosts")
 # os.remove(host_path)
 
 temp_path = os.path.join(pwd,"temp")
@@ -77,4 +80,4 @@ temp_path = os.path.join(pwd,"temp")
 os.remove(host_path)
 os.rename(temp_path,host_path)
 
-print("[status]:"+"udpate host successfull>>"+host_path)
+print("[status]:"+"udpate hosts successfull>>"+host_path)

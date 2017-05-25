@@ -1,9 +1,9 @@
 
-## 更新host文件 实现翻墙
+## 更新host文件 实现科学上网
 
 [TOC]
 
-## 更新host 实现翻墙
+## 更新host 实现科学上网
 > 1. 从网上获取host文件内容 :https://raw.githubusercontent.com/racaljk/hosts/master/hosts
 > 2. 将获取到的内容中 start 与end 间的部分添加到本地host文件后  
 > 其中:
@@ -134,6 +134,7 @@ print("[status]:"+"udpate host successfull>>"+host_path)
 
 
 #### 5 程序运行结果
+
 ![](image/success_update.png) 
 
 
